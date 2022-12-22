@@ -6,6 +6,16 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/shivanarmada/Jenkins.git'
             }
         }
+        stage('UNIT testing'){
+            
+            steps{
+                
+               script{
+                    
+                    sh 'mvn test'
+                }
+           }
+        }
     }
     
 }
